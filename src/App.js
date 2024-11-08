@@ -40,7 +40,6 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/reservation" element={<Reservations />} />
-            {/* Add more routes here as needed */}
           </Routes>
         </main>
         <Footer />
