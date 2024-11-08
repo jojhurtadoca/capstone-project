@@ -29,13 +29,14 @@ const App = () => {
     const existingData = localStorage.getItem("reservations");
     const dataArray = existingData ? JSON.parse(existingData) : [];
     updateReservations(dataArray);
+    document.title = "Little Lemon Restaurant";
   }, [updateReservations]);
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
         <Header />
-        <main className="main-style">
+        <main data-testid="main" className="main-style">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />

@@ -18,7 +18,7 @@ import dayjs from "dayjs";
 import { AppContext } from "../context/AppContext";
 import { useNavigate } from "react-router-dom";
 
-const ReservationForm = () => {
+const ReservationForm = ({ availableMinTime, availableMaxTime }) => {
   const navigate = useNavigate();
   const { updateReservations } = useContext(AppContext);
   const [formData, setFormData] = useState({
@@ -116,7 +116,11 @@ const ReservationForm = () => {
                   minDate={dayjs()}
                   onChange={(newValue) => handleChange("date", newValue)}
                   renderInput={(params) => (
-                    <TextField className="input-reservation" {...params} />
+                    <TextField
+                      data-testid="date"
+                      className="input-reservation"
+                      {...params}
+                    />
                   )}
                 />
               </div>
@@ -125,8 +129,8 @@ const ReservationForm = () => {
                   label="Select Time"
                   className="input-reservation"
                   value={formData.time}
-                  minTime={dayjs().hour(8).minute(0)}
-                  maxTime={dayjs().hour(22).minute(0)}
+                  minTime={dayjs().hour(availableMinTime).minute(0)}
+                  maxTime={dayjs().hour(availableMaxTime).minute(0)}
                   onChange={(newValue) => handleChange("time", newValue)}
                   renderInput={(params) => (
                     <TextField className="input-reservation" {...params} />
@@ -150,9 +154,10 @@ const ReservationForm = () => {
             <InputLabel>Occasion</InputLabel>
             <Select
               className="input-reservation"
+              data-testid="select"
               value={formData.option}
               onChange={(e) => handleChange("option", e.target.value)}
-              label="Select and occasion"
+              label="Select occasion"
             >
               <MenuItem value="Birthday">Birthday</MenuItem>
               <MenuItem value="Anniversary">Anniversary</MenuItem>
