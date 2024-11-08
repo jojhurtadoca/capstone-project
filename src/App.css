@@ -2,6 +2,27 @@
   text-align: center;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  font-family: "Roboto", sans-serif !important;
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +56,371 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@media (min-width: 898px) {
+  .menu-icon-button {
+    display: none !important;
+  }
+}
+
+@media (max-width: 897px) {
+  .menu-icon-button {
+    display: block !important;
+    margin-left: -20px !important;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+}
+
+.drawer-menu {
+  width: 250;
+  background-color: "white";
+  height: "100%";
+}
+
+@media (min-width: 992px) {
+  .padding-desktop {
+    padding-left: 200px !important;
+    padding-right: 200px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .padding-desktop {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .reservation-section {
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .menu-list-section {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card-media {
+    object-fit: cover;
+    width: 400px;
+    height: 300px;
+  }
+
+  .menu-card {
+    width: 400px;
+  }
+
+  .footer-section-column {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .home-banner {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 899.95px) {
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+}
+
+.header,
+.footer,
+.white-background {
+  background-color: white !important;
+}
+
+.footer {
+  padding-top: 20px;
+}
+
+.desktop-menu a,
+.menu-icon {
+  color: black !important;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+.header-logo {
+  height: 50px;
+  width: 200px;
+}
+
+.footer-image {
+  height: 200px;
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.home-section {
+  flex: 1;
+  align-items: center;
+  align-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.green-background {
+  background-color: #495e57;
+}
+
+.fullscreen {
+  min-height: 65vh;
+}
+
+.main-style {
+  display: block;
+}
+
+.contact-item {
+  gap: 0px;
+}
+
+.contact-item span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.contact-item p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.menu-item {
+  margin-bottom: 10px;
+}
+
+.menu-item span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.promo-img img {
+  border-radius: 20px;
+}
+
+.home-banner {
+  align-items: center;
+  align-content: center;
+}
+
+.title-description h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #f4ce14;
+}
+
+.title-description h2 {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+.title-description p {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.button-component {
+  background-color: #f4ce14 !important;
+  padding: 15px !important;
+  border-radius: 20px !important;
+  color: black !important;
+  margin-bottom: 20px !important;
+}
+
+.footer-section {
+  margin-top: 20px;
+}
+
+.footer-section-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 2px;
+}
+
+.card-media {
+  object-fit: cover;
+}
+
+.menu-list-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: grid;
+  gap: 20px;
+}
+
+.menu-card {
+  border-radius: 20px !important;
+  background-color: #edefee !important;
+}
+
+.menu-list-title-and-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.menu-list-title-and-button h2 {
+  font-size: 40px;
+}
+
+.button-online-menu {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.card-title-and-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.card-title-and-price h3 {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.card-title-and-price span {
+  font-weight: 900;
+  font-size: 18px;
+  color: #ee9972;
+}
+
+.menu-card p {
+  color: #4a5f58;
+  font-size: 16px;
+}
+
+.menu-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.2s;
+}
+
+.card-button {
+  color: black !important;
+  gap: 5px;
+}
+
+.reservation-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 20px;
+}
+
+.reservation-section h1 {
+  color: white;
+}
+
+.form-reservation {
+  flex-direction: column !important;
+  gap: 20px;
+  display: flex;
+  padding: 20px;
+  border: 2px solid white;
+  width: auto;
+}
+
+.form-reservation {
+  max-width: 300px;
+}
+
+.date-divider {
+  display: grid;
+  gap: 20px;
+}
+
+.input-reservation .MuiOutlinedInput-root {
+  color: white;
+  border-color: white;
+}
+
+.input-reservation .MuiOutlinedInput-root:hover fieldset {
+  border-color: white;
+}
+
+.input-reservation .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: white;
+}
+
+.input-reservation .MuiInputLabel-root {
+  color: white;
+}
+
+.input-reservation .MuiOutlinedInput-root fieldset {
+  border-color: white;
+}
+
+.input-reservation .MuiOutlinedInput-root:hover fieldset {
+  border-color: white;
+}
+
+.input-reservation .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: white;
+}
+
+.input-reservation .MuiSvgIcon-root {
+  color: white;
+}
+
+.input-reservation .MuiSvgIcon-root:hover {
+  color: white;
+}
+
+.input-reservation .MuiInputLabel-root.Mui-focused {
+  color: white;
+}
+
+.input-reservation {
+  min-width: 240px !important;
+}
+
+.my-reservations h2,
+.my-reservations span {
+  color: white;
+}
+
+.reservation-list {
+  list-style-type: none;
+  margin-left: -35px;
+}
+
+.reservation-list li {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.reservation-list h3 {
+  color: white;
 }
